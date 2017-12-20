@@ -18,9 +18,13 @@ function populateAllImages() {
 function threeImagesToRender(){
   for(var i = 0; i < imagePaths.length; i++){
     if(shownNow = true){
-      
-    }
+      else
+    }    if (shownNow = false){
+          else
+        }    if (shownNow = )
 
+    }
+}
 
 //constructor function
 

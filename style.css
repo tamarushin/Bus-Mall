@@ -1,1 +1,49 @@
+body {
+  background-color: purple;
+  color: grey;
+}
 
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family:'Patrick Hand', cursive;
+}
+
+#first {
+  position: absolute;
+  margin: auto;
+  padding: 25px;
+  border: 35px solid #B57800;
+  left: 0;
+  right: 50;
+  top: 0;
+  bottom: 0;
+  max-height: 350px;
+  max-width: 350px;
+}
+
+#second {
+  position: absolute;
+  margin: auto;
+  padding: 25px;
+  border: 35px solid #B57800;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-height: 350px;
+  max-width: 350px;
+}
+
+#third {
+  position: absolute;
+  margin: auto;
+  padding: 25px;
+  border: 35px solid #B57800;
+  left: 50;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-height: 350px;
+  max-width: 350px;
+}

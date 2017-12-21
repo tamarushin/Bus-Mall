@@ -6,64 +6,53 @@ var allImages = [];
 var imagesToRender = [];
 
 //random image selector
-function randomIndex() {
-  return Math.floor(Math.random() * (img.imagesPaths.length - 1));
+var randomIndex = function() {
+  return Math.floor(Math.random() * 19);
 }
 
-//constructor function
-//(path) = argument
+var myFunc = function() {
+  var counter = 0;
+  while (counter < 3) {
+    var index = randomIndex();
+    var image = allImages[index];
+    //constructor function
+    //(path) = argument
+    function Image(path){
+      this.name = str.slice(9, -4);
+      this.path = path;
+      this.numClicks = 0;
+      this.numShown = 0;
+      this.shownNow = false;
+      this.shownLastTime = false;
+      allImages.push(this);
 
-function Image(path){
-  this.name = str.slice(9, -4);
-  this.path = path;
-  this.numClicks = 0;
-  this.numShown = 0;
-  this.shownNow = false;
-  this.shownLastTime = false;
-  allImages.push(this);
-}
-//this is where we made all the objects. Ran all of our paths thru function Image(path)
-function populateAllImages() {
-  for (var i = 0; i < imagesPaths.length; i++){
-    new Image(imagesPath[i]);
-  }
-}
-
-function toggleTrue(){
-  for(var i = 0; i < allImages.length; i++){
-    if(allImages[i].shownNow = true){
-      allImages[i].shownLastTime = true;
+  // starts survey by generating three random non-repeating images
+function start() {
+  offSite = onSite; //help from Jamie W
+  onSite = [];
+  while (onSite.length < 3) {
+    var randomIndex = function(){
+      Math.floor(Math.random() * 19);
+    if (productNumber !== offSite[0] && productNumber !== offSite[1] && productNumber !== offSite[2] && productNumber !== onSite[0] && productNumber !== onSite[1]) {
+      onSite.push(productNumber);
     }
   }
+  first.src = products[onSite[0]].path;
+  products[onSite[0]].demo++
+  second.src = products[onSite[1]].path;
+  products[onSite[1]].demo++
+  third.src = products[onSite[2]].path;
+  products[onSite[2]].demo++
 }
-function toggleFalse(){
-  for(var i = 0; i < allImages.length; i++){
-    if(allImages[i].shownLastTime = true){
-      allImages[i].shownLastTime = false;
-      allImages[i].shownNow = false;
+
+// updates chart info
+function amendChart() {
+  for (var i = 0; i < products.length; i++) {
+    names[i] = products[i].name;
+    votes[i] = products[i].clickLog;
+    demo[i] = products[i].demo;
+  }
 }
-
-// function threeItemsToRender(){
-//    this.first.src =
-//    this.second.src =
-//    this.third.src =
-
-//    function threeItemsTo Render() {
-//   const element = ({
-//     new Image().randomIndex()}.
-//
-//   );
-//   ReactDOM.render(
-//     element,
-//     document.getElementById('first')
-//   );
-// }
-
-
-
-//help from stackoverflow
-// var someimage = document.getElementById('this_one').firstChild.getAttribute("src");
-// alert(someimage);
 
 // get html element by id
 var imageOne = document.getElementById('first');

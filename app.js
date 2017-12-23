@@ -6,53 +6,87 @@ var allImages = [];
 var imagesToRender = [];
 
 //random image selector
-var randomIndex = function() {
-  return Math.floor(Math.random() * 19);
+function randomIndex() {
+  return Math.floor(Math.random() * (19);
 }
 
-var myFunc = function() {
-  var counter = 0;
-  while (counter < 3) {
-    var index = randomIndex();
-    var image = allImages[index];
-    //constructor function
-    //(path) = argument
-    function Image(path){
-      this.name = str.slice(9, -4);
-      this.path = path;
-      this.numClicks = 0;
-      this.numShown = 0;
-      this.shownNow = false;
-      this.shownLastTime = false;
-      allImages.push(this);
+//constructor function
+//(path) = argument
 
-  // starts survey by generating three random non-repeating images
-function start() {
-  offSite = onSite; //help from Jamie W
-  onSite = [];
-  while (onSite.length < 3) {
-    var randomIndex = function(){
-      Math.floor(Math.random() * 19);
-    if (productNumber !== offSite[0] && productNumber !== offSite[1] && productNumber !== offSite[2] && productNumber !== onSite[0] && productNumber !== onSite[1]) {
-      onSite.push(productNumber);
+function Image(path){
+  this.name = str.slice(9, -4);
+  this.path = path;
+  this.numClicks = 0;
+  this.numShown = 0;
+  this.shownNow = false;
+  this.shownLastTime = false;
+  allImages.push(this);
+}
+
+//created the opjects and push them into the images array
+photos.push(new Photo('travel bag', './assets/bag.jpg'));
+photos.push(new Photo('banana chopper', './assets/banana.jpg'));
+photos.push(new Photo('bathroom party', './assets/bathroom.jpg'));
+photos.push(new Photo('rain boots', './assets/boots.jpg'));
+photos.push(new Photo('breakfast machine','./assets/breakfast.jpg'));
+photos.push(new Photo('meat ball bubblegum','./assets/bubblegum.jpg'));
+photos.push(new Photo('plastic chair','./assets/chair.jpg'));
+photos.push(new Photo('cthulhu','./assets/cthulhu.jpg'));
+photos.push(new Photo('dog nose','./assets/dog-duck.jpg'));
+photos.push(new Photo('dragon meat','./assets/dragon.jpg'));
+photos.push(new Photo('pen caps','./assets/pen.jpg'));
+photos.push(new Photo('pet sweep','./assets/pet-sweep.jpg'));
+photos.push(new Photo('scissors holder','./assets/scissors.jpg'));
+photos.push(new Photo('shark sleeping bag','./assets/shark.jpg'));
+photos.push(new Photo('sweep mat','./assets/sweep.png'));
+photos.push(new Photo('tautaun blanket','./assets/tauntaun.jpg'));
+photos.push(new Photo('unicorn meat can','./assets/unicorn.jpg'));
+photos.push(new Photo('usb container','./assets/usb.gif'));
+photos.push(new Photo('water container','./assets/water-can.jpg'));
+photos.push(new Photo('wine glass ','./assets/wine-glass.jpg'));
+
+//this is where we made all the objects. Ran all of our paths thru function Image(path)
+function populateAllImages() {
+  for (var i = 0; i < imagesPaths.length; i++){
+    new Image(imagesPath[i]);
+  }
+}
+
+function toggleTrue(){
+  for(var i = 0; i < allImages.length; i++){
+    if(allImages[i].shownNow = true){
+      allImages[i].shownLastTime = true;
     }
   }
-  first.src = products[onSite[0]].path;
-  products[onSite[0]].demo++
-  second.src = products[onSite[1]].path;
-  products[onSite[1]].demo++
-  third.src = products[onSite[2]].path;
-  products[onSite[2]].demo++
+}
+function toggleFalse(){
+  for(var i = 0; i < allImages.length; i++){
+    if(allImages[i].shownLastTime = true){
+      allImages[i].shownLastTime = false;
+      allImages[i].shownNow = false;
 }
 
-// updates chart info
-function amendChart() {
-  for (var i = 0; i < products.length; i++) {
-    names[i] = products[i].name;
-    votes[i] = products[i].clickLog;
-    demo[i] = products[i].demo;
-  }
-}
+// function threeItemsToRender(){
+//    this.first.src =
+//    this.second.src =
+//    this.third.src =
+
+//    function threeItemsTo Render() {
+//   const element = ({
+//     new Image().randomIndex()}.
+//
+//   );
+//   ReactDOM.render(
+//     element,
+//     document.getElementById('first')
+//   );
+// }
+
+
+
+//help from stackoverflow
+// var someimage = document.getElementById('this_one').firstChild.getAttribute("src");
+// alert(someimage);
 
 // get html element by id
 var imageOne = document.getElementById('first');

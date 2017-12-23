@@ -7,6 +7,9 @@ h1 {
   font-size: 50px;
   text-align: center;
   font-family:'Patrick Hand', cursive;
+  padding-top: 30px;
+  text-decoration: underline;
+  color: red;
 }
 
 #first {
